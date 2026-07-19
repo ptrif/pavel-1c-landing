@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Павел Безельт — Автоматизация тестирования 1С</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <main>
+<header class="custom-header">
+  <div class="custom-header__panel">
+    <div class="custom-header__top">
+      <a class="custom-header__logo" href="#top" aria-label="На главную">
+        <img
+          src="https://static.tildacdn.pub/tild3934-3436-4430-a530-623738363836/Logo.svg"
+          alt="Павел Безельт"
+        >
+      </a>
+
+      <nav class="custom-header__nav" aria-label="Основное меню">
+        <a href="#advantages">Преимущества</a>
+        <a href="#how">Как это работает</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <button class="custom-header__button" type="button" data-telegram-cta>
+        <img
+          class="custom-header__button-icon"
+          src="https://static.tildacdn.pub/tild3565-6633-4736-b731-333137663634/telegram.svg"
+          alt=""
+          aria-hidden="true"
+        >
+        <span>Обсудить проект</span>
+      </button>
+
+      <button
+        class="custom-header__burger"
+        type="button"
+        aria-label="Открыть меню"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="custom-header__mobile" id="mobile-menu" aria-hidden="true" inert>
+      <div class="custom-header__mobile-inner">
+        <a href="#advantages">Преимущества</a>
+        <a href="#how">Как это работает</a>
+        <a href="#tariffs">Тарифы</a>
+        <a href="#contacts">Контакты</a>
+
+        <button class="custom-header__mobile-button" type="button" data-telegram-cta>
+          <img
+            src="https://static.tildacdn.pub/tild3565-6633-4736-b731-333137663634/telegram.svg"
+            alt=""
+            aria-hidden="true"
+          >
+          <span>Обсудить проект</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!--Hero Section try -->
+<section class="hero-section" id="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-glow hero-glow-left"></div>
+  <div class="hero-glow hero-glow-right"></div>
+  <div class="hero-glow hero-glow-bottom"></div>
+
+  <div class="hero-floating hero-floating-1c">
+    <img src="https://optim.tildacdn.pub/tild6138-3332-4066-a332-383163643763/-/resize/386x/-/format/webp/pic1-1c.webp" alt="">
+  </div>
+
+  <div class="hero-floating hero-floating-gitlab">
+    <img src="https://optim.tildacdn.pub/tild3165-6165-4564-b965-396365613731/-/resize/178x/-/format/webp/pic3-logo.webp" alt="">
+  </div>
+
+  <div class="hero-floating hero-floating-cloud">
+    <img src="https://optim.tildacdn.pub/tild3165-6165-4564-b965-396365613731/-/resize/178x/-/format/webp/pic3-logo.webp" alt="">
+  </div>
+
+  <div class="hero-floating-label hero-floating-label-bottom">
+    1С для вашего бизнеса
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-label">1С для вашего бизнеса</div>
+
+      <h1 class="hero-title">
+        Автоматизирую<br>
+        тестирование <span>на 1С</span>
+      </h1>
+
+      <p class="hero-text">
+        Внедряю автотесты «под ключ», которые заменяют 3-х<br>
+        ручных тестировщиков, исключают человеческий<br>
+        фактор и экономят до 30% бюджета на поддержку 1С.
+      </p>
+
+      <div class="hero-person-mobile">
+        <img
+          class="hero-person-mobile-img"
+          src="https://optim.tildacdn.pub/tild6566-3931-4164-b863-383261353333/-/format/webp/pavel-1c.png.webp"
+          alt=""
+        >
+        <div class="hero-person-mobile-fade"></div>
+      </div>
+
+      <a href="https://t.me/BezB_B" target="_blank" rel="noopener noreferrer" class="hero-button">
+        <span class="hero-button-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M21.2 4.8L18.4 18.1C18.2 19.1 17.6 19.3 16.8 18.9L12.5 15.8L10.4 17.8C10.2 18 9.9 18.2 9.4 18.2L9.7 13.8L17.8 6.5C18.2 6.2 17.7 6.1 17.2 6.4L7.2 12.7L2.9 11.4C2 11.1 2 10.5 3.1 10.1L19.8 3.7C20.6 3.4 21.4 3.9 21.2 4.8Z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span>Получить бесплатный аудит</span>
+      </a>
+    </div>
+
+    <div class="hero-person-desktop">
+      <img
+        class="hero-person-desktop-img"
+        src="https://optim.tildacdn.pub/tild6566-3931-4164-b863-383261353333/-/format/webp/pavel-1c.png.webp"
+        alt=""
+      >
+    </div>
+  </div>
+
+  <div class="hero-fullwidth-fade"></div>
+</section>
+
+
+<!--Block2-->
+<section class="business-help-section" id="advantages">
+  <div class="business-help-bg">
+    <div class="business-bg-stage">
+      <div class="business-help-base"></div>
+
+      <div class="business-bg-ellipse business-bg-ellipse-left"></div>
+      <div class="business-bg-ellipse business-bg-ellipse-right"></div>
+
+      <div class="business-bg-dark-rect"></div>
+      <div class="business-bg-card-glow"></div>
+      <div class="business-bg-noise"></div>
+    </div>
+  </div>
+
+  <div class="business-help-decor business-help-decor-1c">
+    <img src="https://optim.tildacdn.pub/tild3062-6134-4538-a362-653062396639/-/format/webp/11.png.webp" alt="">
+  </div>
+
+  <div class="business-help-decor business-help-decor-logo-top">
+    <img src="https://optim.tildacdn.pub/tild3637-3532-4061-a264-633234633730/-/format/webp/img-2-optimized.png.webp" alt="">
+  </div>
+
+  <div class="business-help-floating-label business-help-floating-label-left">
+    1С для вашего бизнеса
+  </div>
+
+  <div class="business-help-floating-label business-help-floating-label-right">
+    1С для вашего бизнеса
+  </div>
+
+  <div class="business-help-container">
+    <div class="business-help-title-wrap">
+      <h2 class="business-help-title">
+        Я помогу сделать<br>
+        бизнес круче
+      </h2>
+      <img class="business-help-title-line" src="assets/vector-line.svg" alt="" aria-hidden="true">
+    </div>
+
+    <div class="business-help-cards">
+      <article class="business-card">
+        <div class="business-card-content">
+          <h3 class="business-card-title">Обновления без риска</h3>
+          <p class="business-card-text">
+            Моя задача — сделать так, чтобы ваш бизнес не останавливался из-за «кривых» обновлений или ошибок в коде.
+          </p>
+        </div>
+
+        <div class="business-card-image">
+          <img src="assets/noriskupdates.png" alt="">
+        </div>
+      </article>
+
+      <article class="business-card">
+        <div class="business-card-content">
+          <h3 class="business-card-title">Автоматическая проверка релизов</h3>
+          <p class="business-card-text">
+            Выстраиваю прозрачный процесс: по нажатию одной кнопки система сама проверяет базу и выдаёт детальный отчёт со скриншотами и видео каждого шага.
+          </p>
+        </div>
+
+        <div class="business-card-image">
+          <img src="assets/autocheck.png" alt="">
+        </div>
+      </article>
+
+      <article class="business-card">
+        <div class="business-card-content">
+          <h3 class="business-card-title">Технологии, которые работают вместе</h3>
+          <p class="business-card-text">
+            · Vanessa Automation<br>
+            · TMS<br>
+            · CI/CD<br>
+            · Allure
+          </p>
+        </div>
+
+        <div class="business-card-image">
+          <img src="assets/technologies.png" alt="">
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!--таблица-->
+<section class="loss-section">
+  <div class="loss-bg"></div>
+
+  <div class="loss-container">
+    <div class="loss-header">
+      <h2>
+        Сколько <span>ВЫ</span> теряете<br>
+        <em>на ручных проверках?</em>
+      </h2>
+
+      <p>
+        Сравните реальные затраты: содержание штатного специалиста против
+        профессионального аутсорса. Выгода составляет более
+        <strong>1 300 000 ₽</strong><br>
+        в год на контроле качества 1С
+      </p>
+    </div>
+
+    <div class="loss-table-wrap">
+      <div class="loss-table">
+        <div class="loss-cell loss-cell-empty"></div>
+
+        <div class="loss-cell loss-head loss-head-outsource">
+          <div class="loss-icon loss-icon-blue">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <rect x="12" y="12" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/>
+              <path d="M32 22L42 26V33C42 39 38 44 32 47C26 44 22 39 22 33V26L32 22Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M27 33L31 37L38 29" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Аутсорс</h3>
+        </div>
+
+        <div class="loss-cell loss-head loss-head-staff">
+          <div class="loss-icon loss-icon-red">
+            <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+              <rect x="12" y="12" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2"/>
+              <circle cx="24" cy="29" r="4" stroke="currentColor" stroke-width="2"/>
+              <circle cx="32" cy="26" r="5" stroke="currentColor" stroke-width="2"/>
+              <circle cx="40" cy="29" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 42C20.7 37.8 23.4 35.5 27 35.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 43C26.8 38.6 29 36.2 32 36.2C35 36.2 37.2 38.6 38 43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M37 35.5C40.6 35.5 43.3 37.8 44 42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Специалист в штате</h3>
+        </div>
+
+        <div class="loss-cell loss-label">Зарплата / оплата</div>
+        <div class="loss-cell loss-value loss-value-strong">45 000 ₽</div>
+        <div class="loss-cell loss-value loss-value-muted">100 000 ₽</div>
+
+        <div class="loss-cell loss-label">Налоги и взносы</div>
+        <div class="loss-cell loss-value loss-value-strong">уже включены</div>
+        <div class="loss-cell loss-value loss-value-muted">44 800 ₽</div>
+
+        <div class="loss-cell loss-label">Офис, ПК, лицензии</div>
+        <div class="loss-cell loss-value loss-value-strong">свои ресурсы</div>
+        <div class="loss-cell loss-value loss-value-muted">10 000 ₽</div>
+
+        <div class="loss-cell loss-label">Отпускные и больничные</div>
+        <div class="loss-cell loss-value loss-value-strong">без доплат</div>
+        <div class="loss-cell loss-value loss-value-muted">оплачиваются вами</div>
+
+        <div class="loss-cell loss-label">Найм и адаптация</div>
+        <div class="loss-cell loss-value loss-value-strong">старт после согласования</div>
+        <div class="loss-cell loss-value loss-value-muted">1–2 месяца</div>
+
+        <div class="loss-cell loss-label">Управление процессом</div>
+        <div class="loss-cell loss-value loss-value-strong">готовый процесс под ключ</div>
+        <div class="loss-cell loss-value loss-value-muted">нужно ставить задачи<br>и контролировать</div>
+
+        <div class="loss-cell loss-label">Отчётность</div>
+        <div class="loss-cell loss-value loss-value-strong">отчёт со скриншотами и видео</div>
+        <div class="loss-cell loss-value loss-value-muted">зависит от сотрудника</div>
+
+        <div class="loss-cell loss-label">Итог в месяц</div>
+        <div class="loss-cell loss-value loss-value-strong">45 000 ₽</div>
+        <div class="loss-cell loss-value loss-value-muted">154 800 ₽</div>
+      </div>
+    </div>
+
+    <div class="loss-mobile">
+      <svg class="loss-mobile-symbols" aria-hidden="true">
+        <symbol id="loss-mobile-outsource-icon" viewBox="0 0 64 64">
+          <rect x="12" y="12" width="40" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M32 22L42 26V33C42 39 38 44 32 47C26 44 22 39 22 33V26L32 22Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M27 33L31 37L38 29" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="loss-mobile-staff-icon" viewBox="0 0 64 64">
+          <rect x="12" y="12" width="40" height="40" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="24" cy="29" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="32" cy="26" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="40" cy="29" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 42C20.7 37.8 23.4 35.5 27 35.5M26 43C26.8 38.6 29 36.2 32 36.2C35 36.2 37.2 38.6 38 43M37 35.5C40.6 35.5 43.3 37.8 44 42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+      </svg>
+
+      <div class="loss-mobile-row">
+        <h4>Зарплата / оплата</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> 45 000 ₽</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> 100 000 ₽</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Налоги и взносы</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> уже включены</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> 44 800 ₽</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Офис, ПК, лицензии</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> свои ресурсы</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> 10 000 ₽</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Отпускные и больничные</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> без доплат</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> оплачиваются вами</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Найм и адаптация</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> старт после согласования</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> 1–2 месяца</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Управление процессом</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> готовый процесс под ключ</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> нужно ставить задачи и контролировать</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Отчётность</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> отчёт со скриншотами и видео</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> зависит от сотрудника</p>
+      </div>
+
+      <div class="loss-mobile-row">
+        <h4>Итог в месяц</h4>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-blue" aria-hidden="true"><use href="#loss-mobile-outsource-icon"/></svg>Аутсорс:</b> 45 000 ₽</p>
+        <p><b><svg class="loss-mobile-icon loss-mobile-icon-red" aria-hidden="true"><use href="#loss-mobile-staff-icon"/></svg>Специалист:</b> 154 800 ₽</p>
+      </div>
+    </div>
+
+    <div class="loss-profit">
+      <div>
+        <h3>Чистая выгода:</h3>
+        <p>109 800 ₽ в месяц или</p>
+      </div>
+
+      <div class="loss-profit-value">
+        <span>1 317 600</span>
+        <b>₽ в год</b>
+      </div>
+    </div>
+
+    <button class="loss-button" type="button" data-telegram-cta>
+      <img
+        src="https://static.tildacdn.pub/tild3565-6633-4736-b731-333137663634/telegram.svg"
+        alt=""
+        aria-hidden="true"
+      >
+      <span>Получить бесплатный аудит</span>
+    </button>
+  </div>
+</section>
+
+
+<!--Маршрут-->
+<section class="automation-section" id="how">
+  <div class="automation-bg"></div>
+
+  <div class="automation-grid-wrap" aria-hidden="true">
+    <img
+      class="automation-grid-vector"
+      src="https://static.tildacdn.com/tild6132-3962-4431-a630-653335346263/elenenbt.svg"
+      alt=""
+    >
+  </div>
+
+  <div class="automation-orb automation-orb-1"></div>
+  <div class="automation-orb automation-orb-2"></div>
+  <div class="automation-orb automation-orb-3"></div>
+
+  <div class="automation-container">
+    <div class="automation-header">
+      <h2>Путь<br>к автоматизации</h2>
+      <p>5 шагов от нажатия кнопки до готового отчёта — без участия человека.</p>
+    </div>
+
+    <div class="automation-path" aria-hidden="true">
+      <svg viewBox="0 0 1180 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M690 120 C945 120 1036 185 1036 280"
+          stroke="#3275FF"
+          stroke-width="5"
+          stroke-dasharray="18 18"
+          stroke-linecap="round"
+        />
+        <path
+          d="M470 345 C230 355 82 430 82 525"
+          stroke="#3275FF"
+          stroke-width="5"
+          stroke-dasharray="18 18"
+          stroke-linecap="round"
+        />
+        <path
+          d="M700 515 C905 505 987 563 905 638"
+          stroke="#3275FF"
+          stroke-width="5"
+          stroke-dasharray="18 18"
+          stroke-linecap="round"
+        />
+        <path
+          d="M450 700 C230 730 150 805 220 855"
+          stroke="#3275FF"
+          stroke-width="5"
+          stroke-dasharray="18 18"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
+    <div class="automation-steps">
+      <article class="automation-card automation-card-1">
+        <div class="automation-number">01</div>
+        <div class="automation-text">
+          <h3>Анализируем критичные процессы</h3>
+          <p>Определяем сценарии, которые нельзя ломать после обновлений.</p>
+        </div>
+      </article>
+
+      <article class="automation-card automation-card-2">
+        <div class="automation-number">02</div>
+        <div class="automation-text">
+          <h3>Настраиваем автотесты</h3>
+          <p>Создаём проверки под вашу конфигурацию 1С.</p>
+        </div>
+      </article>
+
+      <article class="automation-card automation-card-3">
+        <div class="automation-number">03</div>
+        <div class="automation-text">
+          <h3>Интегрируем в процесс разработки</h3>
+          <p>Подключаем тесты к CI/CD и релизному циклу.</p>
+        </div>
+      </article>
+
+      <article class="automation-card automation-card-4">
+        <div class="automation-number">04</div>
+        <div class="automation-text">
+          <h3>Автоматически проверяем обновления</h3>
+          <p>Система запускает тестирование без ручной рутины.</p>
+        </div>
+      </article>
+
+      <article class="automation-card automation-card-5">
+        <div class="automation-number">05</div>
+        <div class="automation-text">
+          <h3>Получаете отчёт до релиза</h3>
+          <p>Скриншоты, видео шагов и список найденных ошибок.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!--Видео-->
+<section class="result-video-section">
+  <div class="result-video-bg"></div>
+
+  <div class="result-video-grid result-video-grid-left" aria-hidden="true">
+    <svg width="1186" height="1187" viewBox="0 0 1186 1187" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="mix-blend-mode:overlay">
+        <mask id="result_grid_mask_left" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1186" height="1187">
+          <rect x="444.393" y="0.685675" width="863.018" height="865.087" transform="rotate(30.8575 444.393 0.685675)" fill="#D9D9D9" stroke="white"/>
+        </mask>
+        <g mask="url(#result_grid_mask_left)">
+          <line x1="464.559" y1="-33.0648" x2="-15.9215" y2="771.112" stroke="white"/>
+          <line x1="531.607" y1="6.99522" x2="51.1266" y2="811.172" stroke="white"/>
+          <line x1="598.656" y1="47.0558" x2="118.175" y2="851.232" stroke="white"/>
+          <line x1="665.704" y1="87.1163" x2="185.224" y2="891.293" stroke="white"/>
+          <line x1="732.753" y1="127.176" x2="252.272" y2="931.353" stroke="white"/>
+          <line x1="799.801" y1="167.236" x2="319.321" y2="971.413" stroke="white"/>
+          <line x1="866.85" y1="207.297" x2="386.369" y2="1011.47" stroke="white"/>
+          <line x1="933.898" y1="247.357" x2="453.418" y2="1051.53" stroke="white"/>
+          <line x1="1000.95" y1="287.417" x2="520.466" y2="1091.59" stroke="white"/>
+          <line x1="1068" y1="327.478" x2="587.515" y2="1131.65" stroke="white"/>
+          <line x1="1135.04" y1="367.538" x2="654.563" y2="1171.71" stroke="white"/>
+          <line x1="1202.09" y1="407.598" x2="721.612" y2="1211.77" stroke="white"/>
+          <line x1="1214.82" y1="461" x2="410.642" y2="-19.4806" stroke="white"/>
+          <line x1="1174.76" y1="528.049" x2="370.582" y2="47.5683" stroke="white"/>
+          <line x1="1134.7" y1="595.097" x2="330.522" y2="114.617" stroke="white"/>
+          <line x1="1094.64" y1="662.146" x2="290.461" y2="181.665" stroke="white"/>
+          <line x1="1054.58" y1="729.194" x2="250.401" y2="248.714" stroke="white"/>
+          <line x1="1014.52" y1="796.243" x2="210.341" y2="315.763" stroke="white"/>
+          <line x1="974.456" y1="863.292" x2="170.28" y2="382.811" stroke="white"/>
+          <line x1="934.396" y1="930.34" x2="130.22" y2="449.859" stroke="white"/>
+          <line x1="894.336" y1="997.389" x2="90.1599" y2="516.908" stroke="white"/>
+          <line x1="854.276" y1="1064.44" x2="50.0996" y2="583.956" stroke="white"/>
+          <line x1="814.216" y1="1131.49" x2="10.0395" y2="651.005" stroke="white"/>
+          <line x1="774.155" y1="1198.53" x2="-30.021" y2="718.053" stroke="white"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="result-video-grid result-video-grid-right" aria-hidden="true">
+    <svg width="1186" height="1187" viewBox="0 0 1186 1187" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g style="mix-blend-mode:overlay">
+        <mask id="result_grid_mask_right" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1186" height="1187">
+          <rect x="444.393" y="0.685675" width="863.018" height="865.087" transform="rotate(30.8575 444.393 0.685675)" fill="#D9D9D9" stroke="white"/>
+        </mask>
+        <g mask="url(#result_grid_mask_right)">
+          <line x1="464.559" y1="-33.0648" x2="-15.9215" y2="771.112" stroke="white"/>
+          <line x1="531.607" y1="6.99522" x2="51.1266" y2="811.172" stroke="white"/>
+          <line x1="598.656" y1="47.0558" x2="118.175" y2="851.232" stroke="white"/>
+          <line x1="665.704" y1="87.1163" x2="185.224" y2="891.293" stroke="white"/>
+          <line x1="732.753" y1="127.176" x2="252.272" y2="931.353" stroke="white"/>
+          <line x1="799.801" y1="167.236" x2="319.321" y2="971.413" stroke="white"/>
+          <line x1="866.85" y1="207.297" x2="386.369" y2="1011.47" stroke="white"/>
+          <line x1="933.898" y1="247.357" x2="453.418" y2="1051.53" stroke="white"/>
+          <line x1="1000.95" y1="287.417" x2="520.466" y2="1091.59" stroke="white"/>
+          <line x1="1068" y1="327.478" x2="587.515" y2="1131.65" stroke="white"/>
+          <line x1="1135.04" y1="367.538" x2="654.563" y2="1171.71" stroke="white"/>
+          <line x1="1202.09" y1="407.598" x2="721.612" y2="1211.77" stroke="white"/>
+          <line x1="1214.82" y1="461" x2="410.642" y2="-19.4806" stroke="white"/>
+          <line x1="1174.76" y1="528.049" x2="370.582" y2="47.5683" stroke="white"/>
+          <line x1="1134.7" y1="595.097" x2="330.522" y2="114.617" stroke="white"/>
+          <line x1="1094.64" y1="662.146" x2="290.461" y2="181.665" stroke="white"/>
+          <line x1="1054.58" y1="729.194" x2="250.401" y2="248.714" stroke="white"/>
+          <line x1="1014.52" y1="796.243" x2="210.341" y2="315.763" stroke="white"/>
+          <line x1="974.456" y1="863.292" x2="170.28" y2="382.811" stroke="white"/>
+          <line x1="934.396" y1="930.34" x2="130.22" y2="449.859" stroke="white"/>
+          <line x1="894.336" y1="997.389" x2="90.1599" y2="516.908" stroke="white"/>
+          <line x1="854.276" y1="1064.44" x2="50.0996" y2="583.956" stroke="white"/>
+          <line x1="814.216" y1="1131.49" x2="10.0395" y2="651.005" stroke="white"/>
+          <line x1="774.155" y1="1198.53" x2="-30.021" y2="718.053" stroke="white"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="result-video-container">
+    <div class="result-video-title">
+      <div class="result-video-title-back">РЕЗУЛЬТАТ</div>
+      <h2>который видно сразу</h2>
+    </div>
+
+    <div
+      class="result-video-player"
+      data-video-url=""
+      data-video-comment="Когда появится видео, вставь embed-ссылку в data-video-url. Например: https://www.youtube.com/embed/VIDEO_ID?autoplay=1"
+    >
+      <div class="result-video-placeholder"></div>
+
+      <button class="result-video-play" type="button" aria-label="Воспроизвести видео">
+        <span class="result-video-play-glass">
+          <svg width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="117.724" height="117.724" rx="58.862" fill="black" fill-opacity="0.01"/>
+            <path d="M80.2919 58.8621L48.147 77.4209L48.147 40.3032L80.2919 58.8621Z" fill="#2D69FF"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--Тарифы-->
+<section class="tariffs-section" id="tariffs">
+  <div class="tariffs-bg"></div>
+
+  <div class="tariffs-grid" aria-hidden="true">
+    <img
+      src="https://static.tildacdn.com/tild6132-3962-4431-a630-653335346263/elenenbt.svg"
+      alt=""
+    >
+  </div>
+
+  <div class="tariffs-orb tariffs-orb-1"></div>
+  <div class="tariffs-orb tariffs-orb-2"></div>
+  <div class="tariffs-orb tariffs-orb-3"></div>
+
+  <div class="tariffs-container">
+    <div class="tariffs-heading">
+      <h2>Тарифы</h2>
+      <p>Выберите формат внедрения<br>автотестов под ваш масштаб</p>
+    </div>
+
+    <div class="tariffs-carousel">
+      <div class="tariffs-stage">
+        <article class="tariff-card tariff-slot tariff-slot-left">
+          <div class="tariff-card-inner"></div>
+        </article>
+
+        <article class="tariff-card tariff-slot tariff-slot-center">
+          <div class="tariff-popular" hidden>
+            <span class="tariff-popular-icon">☆</span>
+            <span>Популярный</span>
+          </div>
+          <div class="tariff-card-inner"></div>
+        </article>
+
+        <article class="tariff-card tariff-slot tariff-slot-right">
+          <div class="tariff-card-inner"></div>
+        </article>
+      </div>
+
+      <div class="tariffs-nav">
+        <button class="tariffs-nav-button tariffs-prev" type="button" aria-label="Предыдущий тариф">
+          <svg viewBox="0 0 71 71" fill="none" aria-hidden="true">
+            <path d="M27.8831 37.0012H49.335V33.4773H27.8831L37.7501 23.6103L35.2393 21.1436L21.1436 35.2393L35.2393 49.335L37.7501 46.8682L27.8831 37.0012Z" fill="currentColor"/>
+          </svg>
+        </button>
+
+        <button class="tariffs-nav-button tariffs-next" type="button" aria-label="Следующий тариф">
+          <svg viewBox="0 0 71 71" fill="none" aria-hidden="true">
+            <path d="M42.5955 37.0012H21.1436V33.4773H42.5955L32.7285 23.6103L35.2393 21.1436L49.335 35.2393L35.2393 49.335L32.7285 46.8682L42.5955 37.0012Z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--Калькулятор ROI-->
+<section class="roi-section">
+  <div class="roi-bg"></div>
+
+  <div class="roi-container">
+    <div class="roi-header">
+      <h2>Калькулятор ROI</h2>
+      <p>Перестаньте платить за рутинные проверки</p>
+    </div>
+
+    <div class="roi-layout">
+      <div class="roi-controls">
+        <div class="roi-control">
+          <div class="roi-control-head">
+            <label for="releases">Количество релизов / обновлений в месяц</label>
+            <output id="releasesValue">4</output>
+          </div>
+
+          <input id="releases" type="range" min="1" max="10" step="1" value="4">
+
+          <div class="roi-minmax">
+            <span>1</span>
+            <span>10</span>
+          </div>
+        </div>
+
+        <div class="roi-control">
+          <div class="roi-control-head">
+            <label for="scenarios">Количество критических сценариев для проверки</label>
+            <output id="scenariosValue">90</output>
+          </div>
+
+          <input id="scenarios" type="range" min="10" max="200" step="10" value="90">
+
+          <div class="roi-minmax">
+            <span>10</span>
+            <span>200</span>
+          </div>
+        </div>
+
+        <div class="roi-control">
+          <div class="roi-control-head">
+            <label for="rate">Средняя ставка часа специалиста</label>
+            <output id="rateValue">2 400 ₽ / час</output>
+          </div>
+
+          <input id="rate" type="range" min="1500" max="5000" step="100" value="2400">
+
+          <div class="roi-minmax">
+            <span>1 500</span>
+            <span>5 000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-results">
+        <div class="roi-result roi-result-time">
+          <div class="roi-icon-mask" aria-hidden="true">
+  <div class="roi-icon roi-icon-clock">
+    <svg width="152" height="174" viewBox="0 0 152 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M44.1951 17.5674C56.6685 17.5674 68.3384 19.9365 79.2146 24.6689C90.1117 29.4104 99.5856 35.8114 107.644 43.8701C115.703 51.9287 122.103 61.402 126.844 72.2988C131.577 83.1752 133.946 94.8457 133.946 107.319C133.946 119.793 131.577 131.463 126.844 142.339C122.103 153.236 115.703 162.71 107.644 170.769C99.5856 178.827 90.1116 185.227 79.2146 189.969C68.3383 194.701 56.6685 197.07 44.1951 197.07C31.7215 197.07 20.0509 194.701 9.17456 189.969C-1.72222 185.227 -11.1956 178.827 -19.2542 170.769C-27.3128 162.71 -33.7139 153.236 -38.4553 142.339C-43.1877 131.463 -45.5568 119.793 -45.5569 107.319C-45.5569 94.8457 -43.1878 83.1752 -38.4553 72.2988C-33.7139 61.4018 -27.3128 51.9288 -19.2542 43.8701C-11.1955 35.8115 -1.72242 29.4104 9.17456 24.6689C20.0509 19.9365 31.7215 17.5674 44.1951 17.5674ZM44.1951 35.8398C24.2999 35.8398 7.39031 42.7803 -6.47681 56.6475C-20.3439 70.5146 -27.2844 87.4242 -27.2844 107.319C-27.2843 127.214 -20.3438 144.123 -6.47681 157.99C7.39031 171.857 24.2999 178.798 44.1951 178.798C64.0901 178.798 80.9989 171.857 94.866 157.99C108.733 144.123 115.674 127.214 115.674 107.319C115.674 87.4242 108.733 70.5146 94.866 56.6475C80.999 42.7805 64.09 35.8399 44.1951 35.8398ZM53.3308 57.875V103.678L85.1873 135.534L72.4099 148.312L35.0583 110.96V57.875H53.3308ZM-7.51978 14.1074L-49.0168 55.6045L-61.7942 42.8271L-20.2971 1.33008L-7.51978 14.1074ZM150.183 42.8262L137.406 55.6045L95.9089 14.1074L108.686 1.3291L150.183 42.8262Z" stroke="#2D69FF" stroke-width="1.88084"/>
+    </svg>
+  </div>
+</div>
+
+          <div class="roi-result-content">
+            <p>Экономия времени в год</p>
+            <div class="roi-result-box">
+              <span id="hoursResult">1 368</span>
+              <b>ч</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="roi-result roi-result-money">
+         
+		  <div class="roi-icon-mask" aria-hidden="true">
+  <div class="roi-icon roi-icon-ruble">
+    <svg width="134" height="163" viewBox="0 0 134 163" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="path-1-outside-1_2022_2206" maskUnits="userSpaceOnUse" x="-12.2466" y="0" width="147" height="165" fill="black">
+                <rect fill="white" x="-12.2466" width="147" height="165"/>
+                <path d="M73.8911 2C86.3325 2.00002 96.8663 4.24849 105.492 8.74414C114.117 13.1875 120.651 19.2254 125.094 26.8574C129.59 34.4373 131.838 42.9581 131.838 52.4199C131.838 62.2477 129.564 70.8996 125.016 78.375C120.468 85.7978 113.881 91.6261 105.256 95.8604C96.631 100.042 86.1757 102.134 73.8911 102.134H42.3687V114.053H77.5767V137.969H42.3687V162.59H13.356V137.969H-10.2466V114.053H13.356V102.134H-10.2466V78.2178H13.356V2H73.8911ZM42.3687 78.2178H73.2632C80.0067 78.2178 85.5484 77.1462 89.8872 75.0029C94.2783 72.8596 97.5189 69.8796 99.6099 66.0635C101.753 62.2474 102.799 57.7782 102.747 52.6553C102.799 47.6368 101.753 43.1409 99.6099 39.168C97.5189 35.1431 94.3306 31.9807 90.0444 29.6807C85.8102 27.3283 80.4254 26.1514 73.8911 26.1514H42.3687V78.2178Z"/>
+              </mask>
+              <path d="M73.8911 2L73.8911 0H73.8911V2ZM105.492 8.74414L104.567 10.5177L104.576 10.5221L105.492 8.74414ZM125.094 26.8574L123.366 27.8637L123.37 27.8707L123.374 27.8777L125.094 26.8574ZM131.838 52.4199H133.838V52.4199H131.838ZM125.016 78.375L126.721 79.4199L126.725 79.4145L125.016 78.375ZM105.256 95.8604L106.129 97.66L106.138 97.6557L105.256 95.8604ZM73.8911 102.134V104.134V104.134V102.134ZM42.3687 102.134V100.134H40.3687V102.134H42.3687ZM42.3687 114.053H40.3687V116.053H42.3687V114.053ZM77.5767 114.053H79.5767V112.053H77.5767V114.053ZM77.5767 137.969V139.969H79.5767V137.969H77.5767ZM42.3687 137.969V135.969H40.3687V137.969H42.3687ZM42.3687 162.59V164.59H44.3687V162.59H42.3687ZM13.356 162.59H11.356V164.59H13.356V162.59ZM13.356 137.969H15.356V135.969H13.356V137.969ZM-10.2466 137.969H-12.2466V139.969H-10.2466V137.969ZM-10.2466 114.053V112.053H-12.2466V114.053H-10.2466ZM13.356 114.053V116.053H15.356V114.053H13.356ZM13.356 102.134H15.356V100.134H13.356V102.134ZM-10.2466 102.134H-12.2466V104.134H-10.2466V102.134ZM-10.2466 78.2178V76.2178H-12.2466V78.2178H-10.2466ZM13.356 78.2178V80.2178H15.356V78.2178H13.356ZM13.356 2V0H11.356V2H13.356ZM42.3687 78.2178H40.3687V80.2178H42.3687V78.2178ZM89.8872 75.0029L89.0099 73.2056L89.0014 73.2098L89.8872 75.0029ZM99.6099 66.0635L97.8661 65.0841L97.8609 65.0932L97.8559 65.1024L99.6099 66.0635ZM102.747 52.6553L100.747 52.6344L100.746 52.6551L100.747 52.6757L102.747 52.6553ZM99.6099 39.168L97.8351 40.09L97.8423 40.1038L97.8497 40.1175L99.6099 39.168ZM90.0444 29.6807L89.0732 31.429L89.0859 31.4361L89.0988 31.443L90.0444 29.6807ZM73.8911 26.1514L73.8911 24.1514H73.8911V26.1514ZM42.3687 26.1514V24.1514H40.3687V26.1514H42.3687ZM73.8911 2L73.8911 4C86.098 4.00002 96.2958 6.20651 104.567 10.5177L105.492 8.74414L106.416 6.97059C97.4368 2.29048 86.5671 2.46763e-05 73.8911 0L73.8911 2ZM105.492 8.74414L104.576 10.5221C112.897 14.8087 119.133 20.5931 123.366 27.8637L125.094 26.8574L126.823 25.8512C122.169 17.8576 115.337 11.5663 106.408 6.9662L105.492 8.74414ZM125.094 26.8574L123.374 27.8777C127.673 35.1261 129.838 43.2898 129.838 52.4199H131.838H133.838C133.838 42.6264 131.507 33.7486 126.814 25.8372L125.094 26.8574ZM131.838 52.4199H129.838C129.838 61.9273 127.642 70.2107 123.307 77.3355L125.016 78.375L126.725 79.4145C131.486 71.5886 133.838 62.568 133.838 52.4199H131.838ZM125.016 78.375L123.311 77.3301C118.981 84.3967 112.696 89.9799 104.375 94.065L105.256 95.8604L106.138 97.6557C115.066 93.2724 121.955 87.199 126.721 79.4199L125.016 78.375ZM105.256 95.8604L104.384 94.0607C96.0958 98.0791 85.9557 100.134 73.8911 100.134V102.134V104.134C86.3957 104.134 97.1661 102.006 106.129 97.66L105.256 95.8604ZM73.8911 102.134V100.134H42.3687V102.134V104.134H73.8911V102.134ZM42.3687 102.134H40.3687V114.053H42.3687H44.3687V102.134H42.3687ZM42.3687 114.053V116.053H77.5767V114.053V112.053H42.3687V114.053ZM77.5767 114.053H75.5767V137.969H77.5767H79.5767V114.053H77.5767ZM77.5767 137.969V135.969H42.3687V137.969V139.969H77.5767V137.969ZM42.3687 137.969H40.3687V162.59H42.3687H44.3687V137.969H42.3687ZM42.3687 162.59V160.59H13.356V162.59V164.59H42.3687V162.59ZM13.356 162.59H15.356V137.969H13.356H11.356V162.59H13.356ZM13.356 137.969V135.969H-10.2466V137.969V139.969H13.356V137.969ZM-10.2466 137.969H-8.24658V114.053H-10.2466H-12.2466V137.969H-10.2466ZM-10.2466 114.053V116.053H13.356V114.053V112.053H-10.2466V114.053ZM13.356 114.053H15.356V102.134H13.356H11.356V114.053H13.356ZM13.356 102.134V100.134H-10.2466V102.134V104.134H13.356V102.134ZM-10.2466 102.134H-8.24658V78.2178H-10.2466H-12.2466V102.134H-10.2466ZM-10.2466 78.2178V80.2178H13.356V78.2178V76.2178H-10.2466V78.2178ZM13.356 78.2178H15.356V2H13.356H11.356V78.2178H13.356ZM13.356 2V4H73.8911V2V0H13.356V2ZM42.3687 78.2178V80.2178H73.2632V78.2178V76.2178H42.3687V78.2178ZM73.2632 78.2178V80.2178C80.2002 80.2178 86.0722 79.1182 90.773 76.7961L89.8872 75.0029L89.0014 73.2098C85.0245 75.1743 79.8132 76.2178 73.2632 76.2178V78.2178ZM89.8872 75.0029L90.7645 76.8003C95.4798 74.4987 99.0501 71.247 101.364 67.0245L99.6099 66.0635L97.8559 65.1024C95.9876 68.5121 93.0768 71.2206 89.0099 73.2056L89.8872 75.0029ZM99.6099 66.0635L101.354 67.0429C103.695 62.8732 104.802 58.0476 104.746 52.6349L102.747 52.6553L100.747 52.6757C100.796 57.5088 99.8108 61.6216 97.8661 65.0841L99.6099 66.0635ZM102.747 52.6553L104.746 52.6761C104.802 47.3577 103.691 42.5215 101.37 38.2184L99.6099 39.168L97.8497 40.1175C99.8148 43.7603 100.796 47.916 100.747 52.6344L102.747 52.6553ZM99.6099 39.168L101.385 38.246C99.0946 33.8377 95.6039 30.3942 90.9901 27.9184L90.0444 29.6807L89.0988 31.443C93.0573 33.5672 95.9433 36.4485 97.8351 40.09L99.6099 39.168ZM90.0444 29.6807L91.0157 27.9324C86.3987 25.3673 80.6516 24.1514 73.8911 24.1514L73.8911 26.1514L73.8911 28.1514C80.1992 28.1514 85.2217 29.2893 89.0732 31.429L90.0444 29.6807ZM73.8911 26.1514V24.1514H42.3687V26.1514V28.1514H73.8911V26.1514ZM42.3687 26.1514H40.3687V78.2178H42.3687H44.3687V26.1514H42.3687Z" fill="#2D69FF" mask="url(#path-1-outside-1_2022_2206)"/>
+            
+    </svg>
+  </div>
+</div>
+		  
+
+          <div class="roi-result-content">
+            <p>Экономия бюджета в год</p>
+            <div class="roi-result-box">
+              <span id="moneyResult">3 283 200</span>
+              <b>₽</b>
+            </div>
+          </div>
+        </div>
+
+        <button class="roi-button" type="button" data-telegram-cta>Получить бесплатный аудит</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--ФУТЕР-->
+<section class="footer-cta-shell" id="contacts">
+  <div class="footer-cta-block">
+    <div class="footer-cta-bg"></div>
+
+    <div class="footer-cta-orb footer-cta-orb-left"></div>
+    <div class="footer-cta-orb footer-cta-orb-center"></div>
+    <div class="footer-cta-orb footer-cta-orb-right"></div>
+    <div class="footer-cta-orb footer-cta-orb-top"></div>
+
+    <div class="footer-cta-glass">
+      <div class="footer-cta-container">
+        <div class="footer-cta-left">
+          <h2 class="footer-cta-title">Готовы улучшить<br>свой бизнес?</h2>
+          <p class="footer-cta-text">
+            Обсудим ваш проект и лучшее решение<br>конкретно для вас
+          </p>
+
+          <a href="https://t.me/BezB_B" target="_blank" rel="noopener noreferrer" class="footer-cta-button">
+            <span class="footer-cta-button-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M21.2 4.8L18.4 18.1C18.2 19.1 17.6 19.3 16.8 18.9L12.5 15.8L10.4 17.8C10.2 18 9.9 18.2 9.4 18.2L9.7 13.8L17.8 6.5C18.2 6.2 17.7 6.1 17.2 6.4L7.2 12.7L2.9 11.4C2 11.1 2 10.5 3.1 10.1L19.8 3.7C20.6 3.4 21.4 3.9 21.2 4.8Z" fill="currentColor"/>
+              </svg>
+            </span>
+            <span>Обсудить проект</span>
+          </a>
+        </div>
+
+        <div class="footer-cta-right">
+          <div class="footer-cta-contacts">
+            <a class="footer-cta-contact" href="https://t.me/BezB_B" target="_blank" rel="noopener noreferrer">
+              <span class="footer-cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M21.2 4.8L18.4 18.1C18.2 19.1 17.6 19.3 16.8 18.9L12.5 15.8L10.4 17.8C10.2 18 9.9 18.2 9.4 18.2L9.7 13.8L17.8 6.5C18.2 6.2 17.7 6.1 17.2 6.4L7.2 12.7L2.9 11.4C2 11.1 2 10.5 3.1 10.1L19.8 3.7C20.6 3.4 21.4 3.9 21.2 4.8Z" fill="currentColor"/>
+                </svg>
+              </span>
+              <span>@BezB_B</span>
+            </a>
+
+            <a class="footer-cta-contact" href="mailto:pashabezelt@yandex.ru">
+              <span class="footer-cta-contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M3 6.75C3 5.78 3.78 5 4.75 5H19.25C20.22 5 21 5.78 21 6.75V17.25C21 18.22 20.22 19 19.25 19H4.75C3.78 19 3 18.22 3 17.25V6.75Z" fill="currentColor"/>
+                  <path d="M4.8 7.2L12 12.4L19.2 7.2" stroke="#050B1B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span>pashabezelt@yandex.ru</span>
+            </a>
+          </div>
+
+          <div class="footer-cta-meta">
+            <a href="/privacy" class="footer-cta-policy">Политика конфиденциальности</a>
+            <div class="footer-cta-copy">© Павел Безельт 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-cta-gear" aria-hidden="true">
+      <svg width="632" height="568" viewBox="0 0 632 568" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.32" filter="url(#footerGearBlur)">
+          <path
+            d="M263.452 10.9863C297.201 5.81677 331.667 5.83117 365.411 11.0283L383.771 85.0156V85.0166C385.248 91.0887 388.217 96.7521 392.429 101.587C396.64 106.42 401.983 110.299 408.041 112.951C414.099 115.603 420.727 116.965 427.428 116.943C434.129 116.922 440.746 115.519 446.784 112.829L446.788 112.826L521.412 79.4365C546.909 100.231 568.421 124.714 585.085 151.883L533.435 210.639L533.433 210.641C529.197 215.471 526.195 221.13 524.676 227.203C523.156 233.278 523.163 239.59 524.696 245.661C526.23 251.731 529.244 257.385 533.49 262.207C537.736 267.028 543.103 270.894 549.179 273.536L549.187 273.539L624.397 305.998C622.476 336.952 614.962 367.414 602.15 396.164L519.243 395.691H519.235C512.517 395.67 505.871 397.038 499.8 399.701C493.728 402.364 488.374 406.259 484.16 411.111C479.945 415.965 476.98 421.65 475.514 427.741C474.048 433.829 474.124 440.144 475.734 446.2V446.201L494.956 519.626C467.093 537.564 436.129 551.167 403.331 559.87L351.619 500.258C347.438 495.405 342.117 491.505 336.072 488.833C330.027 486.161 323.404 484.782 316.704 484.79C310.005 484.798 303.385 486.193 297.348 488.881C291.31 491.568 285.998 495.484 281.831 500.349L230.739 559.866C197.84 551.131 166.762 537.527 138.753 519.607L157.288 446.012C158.815 439.954 158.821 433.657 157.303 427.598C155.785 421.539 152.79 415.894 148.563 411.075C144.339 406.258 138.992 402.392 132.938 399.743C126.883 397.095 120.263 395.728 113.566 395.732H113.553L30.3711 396.165C29.7587 394.799 29.1572 393.43 28.5684 392.056L28.5605 392.038L27.9893 390.716C16.3447 363.605 9.37001 335.034 7.30371 306.007L81.9268 273.617L81.9346 273.614C88.0131 270.957 93.3768 267.072 97.6104 262.231C101.845 257.389 104.838 251.716 106.341 245.63C107.844 239.542 107.811 233.22 106.246 227.146C104.681 221.074 101.631 215.427 97.3477 210.622L45.1748 151.899C61.584 124.758 82.849 100.269 108.11 79.4395L182.992 112.828L182.993 112.829C189.038 115.521 195.666 116.919 202.374 116.927C209.082 116.935 215.713 115.553 221.766 112.877C227.819 110.2 233.148 106.293 237.333 101.432C241.519 96.5687 244.451 90.8788 245.879 84.7891L245.878 84.7881L263.452 10.9863ZM317.474 202.649C304.808 202.423 292.212 204.468 280.403 208.67L280.396 208.673L280.387 208.676C256.605 217.293 237.468 234.18 227.278 255.718C217.084 277.265 216.717 301.633 226.263 323.43V323.431C235.673 345.257 254.189 362.703 277.641 372.025C301.089 381.346 327.63 381.821 351.458 373.349L351.466 373.346L351.475 373.342C375.254 364.733 394.392 347.856 404.59 326.327C414.795 304.783 415.173 280.413 405.636 258.611C400.981 247.803 394.041 237.954 385.226 229.617C376.406 221.277 365.881 214.612 354.26 209.99C342.639 205.368 330.139 202.876 317.474 202.649Z"
+            stroke="#2D69FF"
+            stroke-width="6.24"
+          />
+        </g>
+        <defs>
+          <filter id="footerGearBlur" x="0" y="0" width="631.64" height="567.381" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
