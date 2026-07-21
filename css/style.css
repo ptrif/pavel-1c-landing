@@ -8,12 +8,17 @@
 html {
   scroll-behavior: smooth;
   background: #050b1b;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   overflow-x: hidden;
+  font-family: Inter, Arial, sans-serif;
   background:
     linear-gradient(
       180deg,
@@ -75,7 +80,7 @@ main > section {
     z-index: 9999;
     width: 100%;
     padding: 0 24px;
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
     color: #ffffff;
     pointer-events: none;
   }
@@ -166,7 +171,7 @@ main > section {
 
     font-size: 18px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
 
     transition:
@@ -307,7 +312,7 @@ main > section {
       text-decoration: none;
       font-size: 18px;
       line-height: 1.2;
-      font-weight: 500;
+      font-weight: 600;
       padding: 14px 0;
     }
 
@@ -328,7 +333,7 @@ main > section {
 
       font-size: 18px;
       line-height: 1;
-      font-weight: 700;
+      font-weight: 600;
       cursor: pointer;
     }
 
@@ -527,7 +532,7 @@ main > section {
     font-family: Inter, Arial, sans-serif;
     font-size: 24px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0;
     box-shadow:
       0 0 42px rgba(45, 105, 255, 0.28),
@@ -597,6 +602,10 @@ main > section {
     display: none;
   }
 
+  .hero-person-mobile-icons {
+    display: none;
+  }
+
   /* GLOBAL SEAMLESS FADE */
   .hero-fullwidth-fade {
     position: absolute;
@@ -636,31 +645,33 @@ main > section {
   }
 
   .hero-floating-1c {
-    width: 158px;
-    height: 158px;
-    top: 72px;
-    left: 52.5%;
-    transform: translateX(-50%) rotate(-8deg);
-    opacity: 0.26;
+    width: 176px;
+    height: 176px;
+    top: 176px;
+    left: calc(50% + 34px);
+    transform: rotate(-10deg);
+    opacity: 0.24;
     filter: blur(0.15px);
   }
 
   .hero-floating-gitlab {
-    width: 110px;
-    height: 110px;
-    top: 88px;
-    right: 124px;
+    width: 118px;
+    height: 118px;
+    top: 170px;
+    left: calc(50% + 640px);
+    right: auto;
     transform: rotate(13deg);
-    opacity: 0.42;
+    opacity: 0.3;
   }
 
   .hero-floating-cloud {
     width: 72px;
     height: 72px;
-    top: 330px;
-    right: 58px;
+    top: 462px;
+    left: calc(50% + 760px);
+    right: auto;
     transform: rotate(18deg);
-    opacity: 0.24;
+    opacity: 0.22;
   }
 
   .hero-floating-label-bottom {
@@ -733,12 +744,22 @@ main > section {
     }
 
     .hero-floating-1c {
-      top: 82px;
-      left: 54%;
+      width: 154px;
+      height: 154px;
+      top: 150px;
+      left: calc(50% + 18px);
     }
 
     .hero-floating-gitlab {
-      right: 84px;
+      width: 100px;
+      height: 100px;
+      top: 152px;
+      left: calc(50% + 488px);
+    }
+
+    .hero-floating-cloud {
+      top: 390px;
+      left: calc(50% + 572px);
     }
   }
 
@@ -798,14 +819,15 @@ main > section {
 
     .hero-person-mobile-img {
       position: absolute;
-      right: -22px;
+      left: 50%;
       bottom: 0;
       display: block;
       width: 650px;
       max-width: none;
       height: auto;
       object-fit: contain;
-      object-position: bottom right;
+      object-position: center bottom;
+      transform: translateX(-50%);
       filter: drop-shadow(0 22px 44px rgba(0, 0, 0, 0.24));
       z-index: 1;
     }
@@ -813,10 +835,10 @@ main > section {
     .hero-person-mobile-fade {
       position: absolute;
       left: 50%;
-      bottom: 0;
+      bottom: -34px;
       transform: translateX(-50%);
       width: 100vw;
-      height: 220px;
+      height: 240px;
       z-index: 2;
       pointer-events: none;
       mix-blend-mode: multiply;
@@ -824,9 +846,9 @@ main > section {
         linear-gradient(
           180deg,
           rgba(5, 11, 27, 0) 0%,
-          rgba(7, 20, 55, 0.06) 24%,
-          rgba(7, 20, 55, 0.24) 48%,
-          rgba(7, 20, 55, 0.64) 74%,
+          rgba(7, 20, 55, 0.08) 20%,
+          rgba(7, 20, 55, 0.34) 48%,
+          rgba(7, 20, 55, 0.72) 76%,
           rgba(5, 11, 27, 0.94) 100%
         );
     }
@@ -838,31 +860,64 @@ main > section {
     }
 
     .hero-fullwidth-fade {
+      display: block;
+      z-index: 3;
+      height: 360px;
+      bottom: -1px;
+      background: linear-gradient(
+        180deg,
+        rgba(5, 11, 27, 0) 0%,
+        rgba(5, 11, 27, 0.1) 24%,
+        rgba(5, 11, 27, 0.38) 50%,
+        rgba(5, 11, 27, 0.78) 76%,
+        #050b1b 100%
+      );
+    }
+
+    .hero-section > .hero-floating {
       display: none;
     }
 
-    .hero-floating-1c {
-      width: 124px;
-      height: 124px;
-      top: 74px;
-      right: 250px;
-      left: auto;
-      transform: rotate(-8deg);
+    .hero-person-mobile-icons {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      display: block;
+      pointer-events: none;
     }
 
-    .hero-floating-gitlab {
-      width: 86px;
-      height: 86px;
-      top: 92px;
-      right: 38px;
+    .hero-mobile-icon {
+      position: absolute;
+      display: block;
+      width: auto;
+      max-width: none;
+      object-fit: contain;
+      opacity: 0.38;
+      filter: drop-shadow(0 18px 36px rgba(45, 105, 255, 0.18));
     }
 
-    .hero-floating-cloud {
+    .hero-mobile-icon-1c {
+      width: 150px;
+      left: calc(50% - 312px);
+      top: 44px;
+      transform: rotate(-9deg);
+      opacity: 0.34;
+    }
+
+    .hero-mobile-icon-gitlab {
+      width: 106px;
+      left: calc(50% + 192px);
+      top: 36px;
+      transform: rotate(12deg);
+      opacity: 0.4;
+    }
+
+    .hero-mobile-icon-vanessa {
       width: 62px;
-      height: 62px;
-      top: auto;
-      bottom: 290px;
-      right: 18px;
+      left: calc(50% + 292px);
+      top: 210px;
+      transform: rotate(18deg);
+      opacity: 0.28;
     }
 
     .hero-floating-label-bottom {
@@ -909,11 +964,11 @@ main > section {
 
     .hero-person-mobile-img {
       width: 500px;
-      right: -58px;
     }
 
     .hero-person-mobile-fade {
-      height: 160px;
+      bottom: -30px;
+      height: 220px;
     }
 
     .hero-button {
@@ -935,25 +990,26 @@ main > section {
       height: 20px;
     }
 
-    .hero-floating-1c {
-      width: 94px;
-      height: 94px;
-      top: 86px;
-      right: 126px;
-      opacity: 0.24;
+    .hero-mobile-icon-1c {
+      width: 112px;
+      left: 20px;
+      top: 34px;
     }
 
-    .hero-floating-gitlab {
-      width: 70px;
-      height: 70px;
-      top: 96px;
-      right: 12px;
-      opacity: 0.32;
+    .hero-mobile-icon-gitlab {
+      width: 78px;
+      left: auto;
+      right: 30px;
+      top: 32px;
     }
 
-    .hero-floating-cloud {
-      display: none;
+    .hero-mobile-icon-vanessa {
+      width: 48px;
+      left: auto;
+      right: 28px;
+      top: 158px;
     }
+
   }
 
 /* =========================================================
@@ -1026,7 +1082,6 @@ main > section.roi-section {
 
     .hero-person-mobile-img {
       width: 430px;
-      right: -58px;
     }
 
     .hero-button {
@@ -1779,7 +1834,7 @@ main > section.roi-section {
     padding: 72px 20px 88px;
     background: #050b1b;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
   }
 
   .loss-bg {
@@ -1809,7 +1864,7 @@ main > section.roi-section {
     margin: 0;
     font-size: clamp(42px, 5.2vw, 64px);
     line-height: 1.04;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.035em;
   }
 
@@ -1838,7 +1893,7 @@ main > section.roi-section {
     position: relative;
     color: #ffffff;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 600;
     white-space: nowrap;
   }
 
@@ -1927,7 +1982,7 @@ main > section.roi-section {
     margin: 0;
     font-size: 22px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .loss-icon {
@@ -1968,7 +2023,7 @@ main > section.roi-section {
 
   .loss-value-strong {
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .loss-value-muted {
@@ -2030,7 +2085,7 @@ main > section.roi-section {
     margin: 0 0 12px;
     font-size: 30px;
     line-height: 1.1;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .loss-profit p {
@@ -2075,7 +2130,7 @@ main > section.roi-section {
     z-index: 1;
     font-size: clamp(48px, 5vw, 66px);
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.03em;
   }
 
@@ -2103,7 +2158,7 @@ main > section.roi-section {
 
     font-size: 20px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     cursor: default;
   }
 
@@ -2272,7 +2327,7 @@ main > section.roi-section {
     padding: 72px 20px 96px;
     background: #050b1b;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
   }
 
   .automation-bg {
@@ -2402,7 +2457,7 @@ main > section.roi-section {
     margin: 0;
     font-size: clamp(48px, 5.2vw, 72px);
     line-height: 1.05;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.035em;
   }
 
@@ -2494,7 +2549,7 @@ main > section.roi-section {
     color: #3275ff;
     font-size: 104px;
     line-height: 0.85;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.06em;
   }
 
@@ -2503,7 +2558,7 @@ main > section.roi-section {
     color: #ffffff;
     font-size: 22px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .automation-text p {
@@ -2718,7 +2773,7 @@ main > section.roi-section {
     padding: 92px 20px 120px;
     background: #050b1b;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
   }
 
   .result-video-bg {
@@ -2786,7 +2841,7 @@ main > section.roi-section {
     margin: 0 auto -28px;
     font-size: clamp(82px, 9vw, 132px);
     line-height: 0.9;
-    font-weight: 900;
+    font-weight: 600;
     font-style: italic;
     letter-spacing: -0.07em;
     text-transform: uppercase;
@@ -2805,7 +2860,7 @@ main > section.roi-section {
     margin: 0;
     font-size: clamp(42px, 4.6vw, 64px);
     line-height: 1.02;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.035em;
     color: #ffffff;
   }
@@ -2986,7 +3041,7 @@ main > section.roi-section {
     padding: 110px 20px 96px;
     background: #050b1b;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
   }
 
   .tariffs-bg {
@@ -3080,7 +3135,7 @@ main > section.roi-section {
     color: #ffffff;
     font-size: clamp(48px, 5vw, 64px);
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.04em;
   }
 
@@ -3185,7 +3240,7 @@ main > section.roi-section {
     color: #ffffff;
     font-size: 24px;
     line-height: 1.15;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .tariff-price {
@@ -3193,7 +3248,7 @@ main > section.roi-section {
     color: #ffffff;
     font-size: 54px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.02em;
     white-space: nowrap;
   }
@@ -3253,7 +3308,7 @@ main > section.roi-section {
   }
 
   .tariff-time b {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   .tariff-button {
@@ -3264,7 +3319,7 @@ main > section.roi-section {
     border-radius: 6px;
     font-size: 18px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
     transition:
       transform 0.2s ease,
@@ -3308,7 +3363,7 @@ main > section.roi-section {
     color: #a8e2ff;
     font-size: 18px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     box-shadow: 0 14px 48px rgba(45, 105, 255, 0.22);
@@ -3511,7 +3566,7 @@ main > section.roi-section {
     overflow: hidden;
     background: #050b1b;
     color: #ffffff;
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
     padding: 72px 20px 96px;
   }
 
@@ -3559,7 +3614,7 @@ main > section.roi-section {
     margin: 0 0 20px;
     font-size: clamp(44px, 6vw, 78px);
     line-height: 0.95;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.04em;
   }
 
@@ -3603,7 +3658,7 @@ main > section.roi-section {
   .roi-control label {
     font-size: 20px;
     line-height: 1.35;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .roi-control output {
@@ -3616,7 +3671,7 @@ main > section.roi-section {
     color: #ffffff;
     font-size: 34px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     text-shadow: 0 0 16px rgba(58, 122, 255, 0.75);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -3762,7 +3817,7 @@ main > section.roi-section {
   .roi-result-box span {
     font-size: clamp(44px, 4.7vw, 64px);
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0.02em;
     white-space: nowrap;
   }
@@ -3821,7 +3876,7 @@ main > section.roi-section {
     color: #ffffff;
     font-size: 24px;
     line-height: 1.2;
-    font-weight: 700;
+    font-weight: 600;
     cursor: default;
     box-shadow: 0 18px 42px rgba(20, 70, 220, 0.32);
   }
@@ -3962,7 +4017,7 @@ main > section.roi-section {
     background:
       radial-gradient(circle at 50% 0%, rgba(45, 105, 255, 0.14), transparent 34%),
       linear-gradient(180deg, #050b1b 0%, #050b1b 100%);
-    font-family: Arial, sans-serif;
+    font-family: Inter, Arial, sans-serif;
   }
 
   .footer-cta-block {
@@ -4092,7 +4147,7 @@ main > section.roi-section {
     margin: 0 0 24px;
     font-size: clamp(44px, 4.3vw, 64px);
     line-height: 0.98;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -0.04em;
     color: #ffffff;
   }
@@ -4121,7 +4176,7 @@ main > section.roi-section {
     box-shadow: 0 0 40px rgba(45, 105, 255, 0.24);
     font-size: 22px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     transition:
       transform 0.2s ease,
       box-shadow 0.2s ease,
@@ -4631,5 +4686,42 @@ main > section.roi-section {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Customer hero update */
+@media (max-width: 960px) {
+  .hero-person-mobile {
+    overflow: visible;
+  }
+
+  .hero-person-mobile-img {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    object-position: center bottom;
+  }
+
+  .hero-person-mobile-fade {
+    bottom: -34px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-person-mobile-fade {
+    bottom: -30px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-person-mobile-img {
+    right: auto;
+  }
+
+  .hero-person-mobile-fade {
+    bottom: -26px;
+    height: 210px;
   }
 }
