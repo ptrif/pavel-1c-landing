@@ -642,6 +642,7 @@ main > section {
     height: 100%;
     display: block;
     object-fit: contain;
+    mix-blend-mode: luminosity;
   }
 
   .hero-floating-1c {
@@ -892,6 +893,7 @@ main > section {
       width: auto;
       max-width: none;
       object-fit: contain;
+      mix-blend-mode: luminosity;
       opacity: 0.38;
       filter: drop-shadow(0 18px 36px rgba(45, 105, 255, 0.18));
     }
@@ -1055,6 +1057,14 @@ main > section.roi-section {
 }
 
 @media (max-width: 760px) {
+  main {
+    overflow: visible;
+  }
+
+  .business-help-section {
+    overflow: visible;
+  }
+
   .business-help-bg,
   .loss-bg,
   .automation-bg,
@@ -1333,7 +1343,7 @@ main > section.roi-section {
     margin: 0 0 28px;
     font-family: Inter, Arial, sans-serif;
     font-size: 24px;
-    line-height: 170%;
+    line-height: 125%;
     font-weight: 600;
     letter-spacing: 0;
     color: rgba(255, 255, 255, 0.92);
@@ -1392,10 +1402,13 @@ main > section.roi-section {
   }
 
   .business-help-decor img {
+    position: relative;
+    z-index: 2;
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
+    mix-blend-mode: luminosity;
   }
 
   .business-help-decor-1c {
@@ -1403,21 +1416,97 @@ main > section.roi-section {
     top: 210px;
     width: 292px;
     height: 292px;
-    opacity: 0.72;
+    opacity: 1;
     filter:
       drop-shadow(0 0 42px rgba(45, 105, 255, 0.48))
       drop-shadow(0 24px 44px rgba(0, 0, 0, 0.32));
     transform: rotate(-8deg);
   }
 
+  .business-help-decor-1c img {
+    opacity: 0.72;
+  }
+
+  .business-help-decor-1c::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 54%;
+    width: 142%;
+    height: 86%;
+    border-radius: 50%;
+    background: #2d69ff;
+    filter: blur(100px);
+    mix-blend-mode: color-dodge;
+    opacity: 0.78;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .business-help-decor-1c::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 54%;
+    width: 54%;
+    height: 34%;
+    border-radius: 50%;
+    background: #b3c9ff;
+    filter: blur(80px);
+    mix-blend-mode: color-dodge;
+    opacity: 0.32;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
   .business-help-decor-logo-top {
     right: calc(50% - 475px);
     top: 172px;
-    width: 94px;
-    height: 94px;
-    opacity: 0.38;
+    width: 132px;
+    height: 132px;
+    opacity: 1;
     transform: rotate(13deg);
     filter: drop-shadow(0 0 24px rgba(45, 105, 255, 0.22));
+  }
+
+  .business-help-decor-logo-top img {
+    opacity: 0.38;
+  }
+
+  .business-help-decor-logo-top::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 54%;
+    width: 142%;
+    height: 86%;
+    border-radius: 50%;
+    background: #2d69ff;
+    filter: blur(100px);
+    mix-blend-mode: color-dodge;
+    opacity: 0.78;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .business-help-decor-logo-top::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 54%;
+    width: 54%;
+    height: 34%;
+    border-radius: 50%;
+    background: #b3c9ff;
+    filter: blur(80px);
+    mix-blend-mode: color-dodge;
+    opacity: 0.32;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
 
   .business-help-floating-label {
@@ -1590,7 +1679,8 @@ main > section.roi-section {
       position: relative;
       top: auto;
       right: auto;
-      margin: 0 0 86px auto;
+      margin: 0 0 48px auto;
+      overflow: visible;
     }
 
     .business-help-title {
@@ -1599,10 +1689,10 @@ main > section.roi-section {
     }
 
     .business-help-title-line {
-      right: -44px;
+      right: clamp(-92px, -14vw, -46px);
       bottom: -18px;
-      width: 220px;
-      height: 7px;
+      width: clamp(230px, 40vw, 310px);
+      height: auto;
     }
 
     .business-help-cards {
@@ -1611,28 +1701,45 @@ main > section.roi-section {
       right: auto;
       bottom: auto;
       grid-template-columns: 1fr;
-      gap: 18px;
+      gap: 14px;
     }
 
     .business-card {
-      height: 520px;
+      display: flex;
+      flex-direction: column;
+      height: 450px;
     }
 
     .business-card-content {
-      min-height: 190px;
-      padding: 28px 24px 20px;
+      flex: 0 0 auto;
+      min-height: auto;
+      padding: 28px 28px 0;
     }
 
     .business-card-title {
-      margin-bottom: 18px;
-      font-size: 23px;
-      line-height: 145%;
+      margin-bottom: 14px;
+      font-size: 27px;
+      line-height: 125%;
     }
 
     .business-card-text {
       max-width: 560px;
-      font-size: 16px;
-      line-height: 135%;
+      font-size: 20px;
+      line-height: 128%;
+    }
+
+    .business-card-image {
+      position: relative;
+      flex: 1 1 auto;
+      height: auto;
+      min-height: 0;
+      margin-top: 28px;
+    }
+
+    .business-card-image img {
+      object-fit: cover;
+      object-position: center;
+      padding: 0;
     }
 
     .business-bg-ellipse-left {
@@ -1673,8 +1780,8 @@ main > section.roi-section {
     .business-help-decor-logo-top {
       right: 42px;
       top: 116px;
-      width: 78px;
-      height: 78px;
+      width: 109px;
+      height: 109px;
     }
 
     .business-help-floating-label-left {
@@ -1730,8 +1837,9 @@ main > section.roi-section {
 
     .business-help-title-wrap {
       width: 100%;
-      margin-bottom: 70px;
+      margin-bottom: 36px;
       text-align: left;
+      overflow: visible;
     }
 
     .business-help-title {
@@ -1740,36 +1848,42 @@ main > section.roi-section {
     }
 
     .business-help-title-line {
-      left: 0;
-      right: auto;
-      bottom: -16px;
-      width: 190px;
-      height: 6px;
+      left: auto;
+      right: -58px;
+      bottom: -18px;
+      width: clamp(210px, 64vw, 280px);
+      height: auto;
       transform: rotate(-4deg);
     }
 
     .business-card {
-      height: 500px;
+      height: 428px;
       border-radius: 8px;
     }
 
     .business-card-content {
-      min-height: 188px;
-      padding: 24px 20px 18px;
+      min-height: auto;
+      padding: 28px 24px 0;
     }
 
     .business-card-title {
-      font-size: 21px;
-      line-height: 135%;
+      margin-bottom: 12px;
+      font-size: 25px;
+      line-height: 125%;
     }
 
     .business-card-text {
-      font-size: 15px;
-      line-height: 135%;
+      font-size: 19px;
+      line-height: 126%;
     }
 
     .business-card-image {
-      height: 310px;
+      height: auto;
+      margin-top: 28px;
+    }
+
+    .business-card-image img {
+      padding: 0;
     }
 
     .business-bg-ellipse-left {
@@ -1871,6 +1985,13 @@ main > section.roi-section {
   .loss-header h2 span {
     color: #3275ff;
     font-style: italic;
+    font-weight: 600;
+  }
+
+  .loss-header h2 .loss-title-break {
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
   }
 
   .loss-header h2 em {
@@ -1887,6 +2008,7 @@ main > section.roi-section {
     color: rgba(255, 255, 255, 0.86);
     font-size: 18px;
     line-height: 1.55;
+    text-wrap: pretty;
   }
 
   .loss-header p strong {
@@ -2125,13 +2247,17 @@ main > section.roi-section {
     transform: translateX(-50%) translateZ(0);
   }
 
-  .loss-profit-value span {
+  .loss-profit-value > span {
     position: relative;
     z-index: 1;
     font-size: clamp(48px, 5vw, 66px);
     line-height: 1;
-    font-weight: 600;
+    font-weight: 700;
+    font-style: italic;
     letter-spacing: 0.03em;
+    text-shadow:
+      2px 2px 0 #2d69ff,
+      0 0 26px rgba(45, 105, 255, 0.58);
   }
 
   .loss-profit-value b {
@@ -2139,7 +2265,26 @@ main > section.roi-section {
     z-index: 1;
     font-size: 28px;
     line-height: 1;
-    font-weight: 400;
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .loss-profit-currency,
+  .loss-profit-period {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+    text-shadow: none;
+  }
+
+  .loss-profit-currency {
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .loss-profit-period {
+    font-weight: 600;
+    font-style: italic;
   }
 
   .loss-button {
@@ -2180,13 +2325,14 @@ main > section.roi-section {
     }
 
     .loss-header h2 em {
-      margin-left: 0;
-      text-align: left;
+      margin-left: auto;
+      max-width: min(680px, 100%);
+      text-align: right;
       white-space: normal;
     }
 
     .loss-header p {
-      margin: 0;
+      margin: 28px 0 0;
       max-width: 760px;
     }
 
@@ -2216,10 +2362,31 @@ main > section.roi-section {
 
     .loss-header h2 {
       font-size: 42px;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    .loss-header h2 .loss-title-break {
+      display: block;
+    }
+
+    .loss-header h2 .loss-title-desktop-break {
+      display: none;
+    }
+
+    .loss-header h2 em {
+      margin-left: auto;
+      margin-top: -0.06em;
+      max-width: min(360px, 100%);
+      text-align: right;
     }
 
     .loss-header p {
+      margin-top: 24px;
+      max-width: 36ch;
       font-size: 16px;
+      line-height: 1.55;
+      text-wrap: pretty;
     }
 
     .loss-table-wrap {
@@ -2273,25 +2440,99 @@ main > section.roi-section {
       flex-direction: column;
       align-items: flex-start;
       min-height: auto;
-      padding: 28px 22px;
+      overflow: hidden;
+      padding: 30px 22px 32px;
       margin-bottom: 28px;
+      text-align: left;
+      background:
+        radial-gradient(ellipse at 50% 70%, rgba(45, 105, 255, 0.42), transparent 62%),
+        rgba(5, 10, 24, 0.74);
+    }
+
+    .loss-profit > div:first-child {
+      position: relative;
+      z-index: 3;
     }
 
     .loss-profit h3 {
-      font-size: 26px;
+      position: relative;
+      z-index: 3;
+      font-size: 18px;
+    }
+
+    .loss-profit p {
+      position: relative;
+      z-index: 3;
     }
 
     .loss-profit-value {
-      gap: 12px;
+      justify-content: center;
+      gap: 14px;
       white-space: normal;
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, auto) auto;
+      column-gap: 8px;
+      row-gap: 8px;
+      align-items: baseline;
     }
 
-    .loss-profit-value span {
-      font-size: 42px;
+    .loss-profit-value::before {
+      left: 50%;
+      top: 55%;
+      bottom: auto;
+      width: 135%;
+      height: 190px;
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(179, 201, 255, 0.24) 0%, transparent 32%),
+        radial-gradient(ellipse at 50% 54%, #2d69ff 0%, rgba(45, 105, 255, 0.88) 36%, transparent 74%);
+      filter: blur(86px);
+      opacity: 1;
+      transform: translate(-50%, -50%) translateZ(0);
+    }
+
+    .loss-profit-value {
+      width: calc(100% + 28px);
+      margin-right: -14px;
+      margin-left: -14px;
+    }
+
+    .loss-profit-value > span {
+      font-size: clamp(51px, 13.4vw, 60px);
+      text-align: center;
+      text-shadow:
+        2px 2px 0 #2d69ff,
+        0 0 26px rgba(45, 105, 255, 0.82),
+        0 0 54px rgba(45, 105, 255, 0.58);
     }
 
     .loss-profit-value b {
-      font-size: 22px;
+      display: contents;
+      font-size: 27px;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .loss-profit-currency {
+      font-size: clamp(51px, 13.4vw, 60px);
+      font-weight: 700;
+      font-style: italic;
+      line-height: 1;
+      text-shadow:
+        2px 2px 0 #2d69ff,
+        0 0 26px rgba(45, 105, 255, 0.82),
+        0 0 54px rgba(45, 105, 255, 0.58);
+    }
+
+    .loss-profit-period {
+      grid-column: 1 / -1;
+      justify-self: end;
+      text-align: right;
+      font-size: 27px;
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1;
+      margin-top: -4px;
     }
 
     .loss-button {
@@ -2304,15 +2545,13 @@ main > section.roi-section {
   @media (max-width: 420px) {
     .loss-header h2 {
       font-size: 36px;
+      line-height: 1.08;
     }
 
-    .loss-profit-value span {
-      font-size: 34px;
+    .loss-header p {
+      max-width: 34ch;
     }
 
-    .loss-profit-value b {
-      font-size: 18px;
-    }
   }
 
 .automation-section,
@@ -2342,66 +2581,6 @@ main > section.roi-section {
       linear-gradient(180deg, #050b1b 0%, #071025 46%, #050b1b 100%);
   }
 
-  .automation-grid-wrap {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    mix-blend-mode: screen;
-    opacity: 0.2;
-    overflow: hidden;
-  }
-
-  .automation-grid-vector {
-    position: absolute;
-    left: 50%;
-    top: -24%;
-    display: block;
-    width: 145%;
-    height: 155%;
-    max-width: none;
-    transform: translateX(-50%);
-    object-fit: fill;
-    filter:
-      brightness(0.68)
-      sepia(1)
-      saturate(5.8)
-      hue-rotate(180deg);
-  }
-
-  .automation-grid-wrap::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(5, 11, 27, 0.42) 0%,
-      rgba(5, 11, 27, 0.32) 14%,
-      rgba(5, 11, 27, 0.08) 38%,
-      rgba(5, 11, 27, 0.04) 68%,
-      rgba(5, 11, 27, 0.76) 100%
-    );
-    pointer-events: none;
-  }
-
-  .automation-grid-wrap::after {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    left: 24%;
-    right: 24%;
-    bottom: 1%;
-    height: 32%;
-    background: radial-gradient(
-      ellipse at center,
-      rgba(45, 105, 255, 0.48) 0%,
-      rgba(45, 105, 255, 0.22) 38%,
-      rgba(45, 105, 255, 0) 74%
-    );
-    pointer-events: none;
-  }
-
   .automation-orb {
     position: absolute;
     z-index: 2;
@@ -2411,6 +2590,20 @@ main > section.roi-section {
     box-shadow:
       inset -28px -34px 60px rgba(0, 0, 0, 0.58),
       0 0 70px rgba(45, 105, 255, 0.2);
+    filter: blur(10px);
+    pointer-events: none;
+  }
+
+  .automation-orb::after {
+    content: "";
+    position: absolute;
+    inset: -10%;
+    border-radius: inherit;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+    background-size: 120px 120px;
+    mix-blend-mode: overlay;
+    opacity: 0.18;
     pointer-events: none;
   }
 
@@ -2487,6 +2680,8 @@ main > section.roi-section {
     position: relative;
     z-index: 4;
     height: 940px;
+    --automation-card-width: 650px;
+    --automation-card-height: 150px;
   }
 
   .automation-card {
@@ -2494,6 +2689,8 @@ main > section.roi-section {
     display: grid;
     grid-template-columns: 170px minmax(0, 1fr);
     align-items: center;
+    width: var(--automation-card-width);
+    height: var(--automation-card-height);
     min-height: 150px;
     padding: 26px 42px 26px 30px;
     border: 1px solid rgba(255, 255, 255, 0.22);
@@ -2509,40 +2706,39 @@ main > section.roi-section {
   }
 
   .automation-card-1 {
-    width: 650px;
     left: 0;
     top: 0;
   }
 
   .automation-card-2 {
-    width: 680px;
     right: 0;
     top: 190px;
   }
 
   .automation-card-3 {
-    width: 650px;
     left: 0;
     top: 390px;
   }
 
   .automation-card-4 {
-    width: 690px;
     right: 30px;
     top: 585px;
   }
 
   .automation-card-5 {
-    width: 720px;
     left: 220px;
     top: 785px;
+    border-width: 3px;
     border-color: rgba(50, 117, 255, 0.95);
     background:
-      radial-gradient(circle at 58% 100%, rgba(45, 105, 255, 0.34), transparent 42%),
+      radial-gradient(circle at 58% 100%, rgba(45, 105, 255, 0.48), transparent 46%),
+      radial-gradient(circle at 50% 50%, rgba(179, 201, 255, 0.12), transparent 56%),
       rgba(5, 10, 24, 0.86);
     box-shadow:
-      0 0 42px rgba(45, 105, 255, 0.22),
-      inset 0 0 80px rgba(45, 105, 255, 0.08);
+      0 0 0 1px rgba(179, 201, 255, 0.18),
+      0 0 34px rgba(45, 105, 255, 0.68),
+      0 0 86px rgba(45, 105, 255, 0.34),
+      inset 0 0 90px rgba(45, 105, 255, 0.18);
   }
 
   .automation-number {
@@ -2573,14 +2769,9 @@ main > section.roi-section {
       min-height: 1180px;
     }
 
-    .automation-grid-wrap {
-      opacity: 0.19;
-    }
-
-    .automation-grid-vector {
-      top: -22%;
-      width: 165%;
-      height: 154%;
+    .automation-steps {
+      --automation-card-width: 570px;
+      --automation-card-height: 150px;
     }
 
     .automation-orb-1 {
@@ -2605,7 +2796,7 @@ main > section.roi-section {
     }
 
     .automation-card {
-      width: 570px;
+      width: var(--automation-card-width);
       grid-template-columns: 140px minmax(0, 1fr);
     }
 
@@ -2619,7 +2810,6 @@ main > section.roi-section {
 
     .automation-card-2 {
       right: 0;
-      width: 610px;
     }
 
     .automation-card-3 {
@@ -2628,13 +2818,11 @@ main > section.roi-section {
 
     .automation-card-4 {
       right: 0;
-      width: 620px;
     }
 
     .automation-card-5 {
       left: 50%;
       transform: translateX(-50%);
-      width: 650px;
     }
   }
 
@@ -2663,10 +2851,6 @@ main > section.roi-section {
       display: none;
     }
 
-    .automation-grid-wrap {
-      display: none;
-    }
-
     .automation-orb-1 {
       width: 88px;
       height: 88px;
@@ -2689,6 +2873,9 @@ main > section.roi-section {
       height: auto;
       display: grid;
       gap: 16px;
+      grid-auto-rows: 1fr;
+      --automation-card-width: 100%;
+      --automation-card-height: 158px;
     }
 
     .automation-card,
@@ -2702,7 +2889,8 @@ main > section.roi-section {
       right: auto;
       top: auto;
       width: 100%;
-      min-height: 0;
+      height: var(--automation-card-height);
+      min-height: var(--automation-card-height);
       transform: none;
       grid-template-columns: 96px minmax(0, 1fr);
       padding: 24px 20px;
@@ -2749,6 +2937,8 @@ main > section.roi-section {
     .automation-card {
       grid-template-columns: 1fr;
       gap: 14px;
+      height: 240px;
+      min-height: 240px;
       padding: 22px;
     }
 
@@ -2847,11 +3037,14 @@ main > section.roi-section {
     text-transform: uppercase;
     color: transparent;
     background:
-      linear-gradient(180deg, rgba(45, 105, 255, 0.95) 0%, rgba(45, 105, 255, 0.34) 58%, rgba(45, 105, 255, 0.02) 100%);
+      linear-gradient(180deg, rgba(45, 105, 255, 1) 0%, rgba(45, 105, 255, 0.82) 48%, rgba(45, 105, 255, 0.08) 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    opacity: 0.72;
-    text-shadow: 0 0 46px rgba(45, 105, 255, 0.36);
+    opacity: 0.92;
+    text-shadow:
+      0 0 18px rgba(45, 105, 255, 0.72),
+      0 0 46px rgba(45, 105, 255, 0.78),
+      0 0 92px rgba(45, 105, 255, 0.48);
   }
 
   .result-video-title h2 {
@@ -3008,6 +3201,14 @@ main > section.roi-section {
       padding: 64px 14px 76px;
     }
 
+    .result-video-bg {
+      background: linear-gradient(180deg, #050b1b 0%, #071126 46%, #050b1b 100%);
+    }
+
+    .result-video-grid {
+      display: none;
+    }
+
     .result-video-title-back {
       font-size: 58px;
       margin-bottom: -10px;
@@ -3019,6 +3220,13 @@ main > section.roi-section {
 
     .result-video-player {
       border-radius: 6px;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.02),
+        0 20px 54px rgba(0, 0, 0, 0.34);
+    }
+
+    .result-video-placeholder {
+      background: #071020;
     }
 
     .result-video-play,
@@ -3098,6 +3306,7 @@ main > section.roi-section {
     left: 31%;
     top: 90px;
     opacity: 0.34;
+    filter: blur(20px);
   }
 
   .tariffs-orb-2 {
@@ -3106,6 +3315,7 @@ main > section.roi-section {
     right: 12%;
     top: 105px;
     opacity: 0.62;
+    filter: blur(15px);
   }
 
   .tariffs-orb-3 {
@@ -3114,6 +3324,7 @@ main > section.roi-section {
     left: 14%;
     bottom: -18px;
     opacity: 0.44;
+    filter: blur(10px);
   }
 
   .tariffs-container {
@@ -3219,7 +3430,7 @@ main > section.roi-section {
     height: 610px;
     min-height: 610px;
     max-height: 610px;
-    padding: 52px 40px 38px;
+    padding: 52px 40px 50px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -3255,7 +3466,7 @@ main > section.roi-section {
 
   .tariff-label {
     margin: 0 0 14px;
-    color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.62);
     font-size: 15px;
     line-height: 1.25;
   }
@@ -3475,7 +3686,7 @@ main > section.roi-section {
       height: auto;
       min-height: auto;
       max-height: none;
-      padding: 36px 28px 30px;
+      padding: 36px 28px 42px;
       overflow: visible;
     }
 
@@ -3543,7 +3754,7 @@ main > section.roi-section {
     }
 
     .tariff-card-inner {
-      padding: 32px 22px 26px;
+      padding: 32px 22px 42px;
     }
 
     .tariff-popular {
@@ -4489,6 +4700,20 @@ main > section.roi-section {
   object-position: center;
 }
 
+@media (max-width: 960px) {
+  .business-help-section .business-card-image img {
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .business-help-section .business-card-image img {
+    padding: 0;
+  }
+}
+
 /* Second block: blurred continuation of the Tariffs background. */
 .business-help-section .business-bg-ellipse,
 .business-help-section .business-bg-stage::after,
@@ -4622,15 +4847,17 @@ main > section.roi-section {
   }
 
   .loss-profit-value {
-    width: 100%;
-    justify-content: flex-start;
+    width: calc(100% + 28px);
+    margin-right: -14px;
+    margin-left: -14px;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
   .loss-profit-value::before {
-    width: min(105%, 620px);
-    left: 0;
-    transform: translateY(-50%);
+    width: 135%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -4665,6 +4892,40 @@ main > section.roi-section {
 }
 
 @media (max-width: 360px) {
+  .loss-profit-value > span,
+  .loss-profit-currency {
+    font-size: 54px;
+  }
+
+  .loss-profit-value b,
+  .loss-profit-period {
+    font-size: 25px;
+  }
+
+  .business-card {
+    height: 420px;
+  }
+
+  .business-card-content {
+    min-height: auto;
+    padding: 24px 20px 0;
+  }
+
+  .business-card-title {
+    font-size: 23px;
+    line-height: 125%;
+  }
+
+  .business-card-text {
+    font-size: 17px;
+    line-height: 124%;
+  }
+
+  .business-card-image {
+    height: auto;
+    margin-top: 24px;
+  }
+
   .roi-result-box span {
     font-size: 30px;
   }
